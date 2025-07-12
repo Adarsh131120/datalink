@@ -22,7 +22,7 @@ import axios from "axios";
 
 // Use full backend URL in production, fallback to proxy path in dev
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "/api/files",
+  baseURL: "https://datalink-mp5x.onrender.com/api/files" || "/api/files",
   withCredentials: true,
 });
 
