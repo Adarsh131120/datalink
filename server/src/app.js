@@ -36,7 +36,7 @@ app.use(cors({
   },
   credentials: true,
 }));
-app.options('*', cors());
+// app.options('*', cors());
 
 
 
@@ -48,6 +48,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(morgan('dev'));
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+
+app.use("/api/files", fileRoutes); // ✅ Mount routes here
 
 app.get("/", (req, res) => {
   res.send("🚀 Datalink API is live!");
