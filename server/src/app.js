@@ -9,6 +9,8 @@ import cookieParser from 'cookie-parser';
 import bodyParser  from "body-parser";
 import morgan from "morgan"
 
+import fileRoutes from "./routes/file.routes.js";
+
 
 const app = express();
 
