@@ -12,7 +12,7 @@ export const uploadFile = createAsyncThunk('upload', async (fileData, thunkAPI) 
     const formData = new FormData();
     formData.append('file', fileData);
 
-    const response = await axiosInstance.post('/api/files/upload', formData, {
+    const response = await axiosInstance.post('/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
