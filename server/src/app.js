@@ -26,6 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(morgan('dev'));
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
+
+app.get("/", (req, res) => {
+  res.send("🚀 Datalink API is live!");
+});
  
 
 export {app};

@@ -25,8 +25,6 @@ router.post("/upload", upload.single("file"), upLoadFile);
 // ✅ Download Route
 router.get("/:fileId", downLoadFile);
 
-app.get("/", (req, res) => {
-  res.send("🚀 Datalink API is live!");
-});
+
 
 export default router;
